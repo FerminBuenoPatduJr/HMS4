@@ -12,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user_table")
+@Table(name = "owner_table")
 public class User implements UserDetails {
 //    private static final long serialVersionUID = 1L;
     @Id

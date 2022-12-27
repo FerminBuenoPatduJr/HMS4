@@ -13,7 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "admin_table")
+@Table(name = "manager_table")
 public class Manager implements UserDetails
 {
     @Id
