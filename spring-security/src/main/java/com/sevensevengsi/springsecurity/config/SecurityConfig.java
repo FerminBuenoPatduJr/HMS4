@@ -28,16 +28,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
                 .antMatchers("/page/owner").hasRole("OWNER")
-              //  .antMatchers("/page/user").hasRole("USER")
+              //.antMatchers("/page/user").hasRole("USER")
                 .antMatchers("/page/employee").hasRole("EMPLOYEE")
                 .antMatchers("/page/customer").hasRole("CUSTOMER")
                 .antMatchers("/page/manager").hasRole("MANAGER")
                 .antMatchers("/page/admin").hasRole("ADMIN")
                 .antMatchers("/page/manpower").hasRole("ADMIN")
                 .antMatchers("/employee").hasRole("ADMIN")
-             //   .antMatchers("/showNewEmployeeForm").hasRole("ADMIN")
-
-               // .antMatchers("/page/mvp").hasAnyRole("MVP","ADMIN","MANAGER", "USER", "EMPLOYEE", "ADMIN", "OWNER" )
+              //.antMatchers("/showNewEmployeeForm").hasRole("ADMIN")
 
                 .and()
                 .formLogin()
@@ -48,15 +46,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling().accessDeniedPage("/access-denied");
     }
 }
-
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-//        User.UserBuilder users = User.withDefaultPasswordEncoder();
-//
-//        auth.inMemoryAuthentication()
-//                .withUser(users.username("franco").password("test123").roles("EMPLOYEE"))
-//                .withUser(users.username("leo").password("test123").roles("MANAGER"))
-//                .withUser(users.username("mark").password("test123").roles("ADMIN"))
-//                .withUser(users.username("aldrin").password("test123").roles("EMPLOYEE","MANAGER","ADMIN"));
-//    }
