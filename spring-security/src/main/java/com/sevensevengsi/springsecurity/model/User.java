@@ -7,15 +7,14 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "user_table")
 public class User implements UserDetails {
 //    private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Integer id;
 
     private String username;
