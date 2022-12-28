@@ -47,4 +47,9 @@ public class PageController {
     public String forManpower(){
         return "forAuthenticated/manpower";
     }
+
+    @GetMapping("/transactionlogs")
+    public String forTransactionLogs(){
+        return "forAuthenticated/transactionlogs";
+    }
 }
