@@ -26,11 +26,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
         http.authorizeRequests()
 
-                .antMatchers("/page/admin").hasRole("ADMIN")
+
                 .antMatchers("/page/owner").hasRole("OWNER")
+                .antMatchers("/page/user").hasRole("USER")
                 .antMatchers("/page/employee").hasRole("EMPLOYEE")
-                .antMatchers("/page/customer").hasAnyRole("CUSTOMER")
-                .antMatchers("/page/manager").hasAnyRole("MANAGER")
+                .antMatchers("/page/customer").hasRole("CUSTOMER")
+                .antMatchers("/page/manager").hasRole("MANAGER")
+                .antMatchers("/page/admin").hasAnyRole("ADMIN","OWNER", "CUSTOMER", "MANAGER", "USER")
+
                 .and()
                 .formLogin()
                 .permitAll()

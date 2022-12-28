@@ -15,26 +15,31 @@ public class PageController {
 
     @GetMapping("/manager")
     public String forManager(){
-        return "forAuthenticated/page2";
-    }
-
-    @GetMapping("/admin")
-    public String forAdmin(){
-        return "forAuthenticated/page3";
+        return "forAuthenticated/manager";
     }
 
     @GetMapping("/customer")
     public String forCustomer(){
-        return "forAuthenticated/page4";
+        return "forAuthenticated/customer";
     }
 
     @GetMapping("/owner")
     public String forOwner(){
-        return "forAuthenticated/page5";
+        return "forAuthenticated/owner";
     }
 
     @GetMapping("/employee")
     public String forEmployee(){
-        return "forAuthenticated/page6";
+        return "forAuthenticated/employee";
+    }
+
+    @GetMapping("/user")
+    public String forUser(){
+        return "forAuthenticated/user";
+    }
+
+    @GetMapping("/admin")
+    public String forAdmin(){
+        return "forAuthenticated/admin";
     }
 }
