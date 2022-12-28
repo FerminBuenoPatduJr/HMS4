@@ -26,9 +26,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="hotel: ${hotels}">
-      <td th:text="${hotel.hotel_name}" />
-      <td th:text="${hotel.description}" />
+    <tr th:each="hotelList: ${hotelLists}">
+      <td th:text="${hotelList.hotel_name}" />
+      <td th:text="${hotelList.description}" />
 
     </tr>
     </tbody>
