@@ -23,8 +23,18 @@ public class PageController {
         return "forAuthenticated/page3";
     }
 
+    @GetMapping("/customer")
+    public String forCustomer(){
+        return "forAuthenticated/page4";
+    }
+
+    @GetMapping("/owner")
+    public String forOwner(){
+        return "forAuthenticated/page5";
+    }
+
     @GetMapping("/employee")
     public String forEmployee(){
-        return "forAuthenticated/page4";
+        return "forAuthenticated/page6";
     }
 }
