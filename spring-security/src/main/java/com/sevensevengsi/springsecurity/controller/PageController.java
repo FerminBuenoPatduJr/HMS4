@@ -38,11 +38,6 @@ public class PageController {
         return "forAuthenticated/user";
     }
 
-    @GetMapping("/mvp")
-    public String forMVP(){
-        return "forAuthenticated/mvp";
-    }
-
     @GetMapping("/admin")
     public String forAdmin(){
         return "forAuthenticated/admin";
