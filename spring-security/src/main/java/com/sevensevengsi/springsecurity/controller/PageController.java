@@ -40,7 +40,7 @@ public class PageController {
 
     @GetMapping("/mvp")
     public String forMVP(){
-        return "forAuthenticated/mvp";
+        return "forAuthenticated/MVP";
     }
 
     @GetMapping("/admin")
