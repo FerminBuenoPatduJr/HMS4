@@ -27,13 +27,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
 
 
-                .antMatchers("/page/owner").hasRole("OWNER")
-                .antMatchers("/page/user").hasRole("USER")
+                .antMatchers("/page/owner").hasAnyRole("OWNER","MVP")
+              //  .antMatchers("/page/user").hasRole("USER")
                 .antMatchers("/page/employee").hasRole("EMPLOYEE")
-                .antMatchers("/page/customer").hasRole("CUSTOMER")
-                .antMatchers("/page/manager").hasRole("MANAGER")
-                .antMatchers("/page/admin").hasRole("ADMIN")
+                .antMatchers("/page/customer").hasAnyRole("CUSTOMER","MVP")
+                .antMatchers("/page/manager").hasAnyRole("MANAGER","MVP")
+                .antMatchers("/page/admin").hasAnyRole("ADMIN","MVP")
                 .antMatchers("/page/mvp").hasRole("MVP")
+                .antMatchers("/page/manpower").hasRole("ADMIN")
                // .antMatchers("/page/mvp").hasAnyRole("MVP","ADMIN","MANAGER", "USER", "EMPLOYEE", "ADMIN", "OWNER" )
 
                 .and()

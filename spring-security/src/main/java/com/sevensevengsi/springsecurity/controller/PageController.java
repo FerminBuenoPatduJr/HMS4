@@ -47,4 +47,9 @@ public class PageController {
     public String forAdmin(){
         return "forAuthenticated/admin";
     }
+
+    @GetMapping("/manpower")
+    public String forManpower(){
+        return "forAuthenticated/manpower";
+    }
 }
