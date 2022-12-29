@@ -1,7 +1,9 @@
+
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <title>List of Hotel</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -65,9 +67,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="hotel_list: ${hotel_lists}">
-      <td th:text="${hotel_list.hotel_name}"></td>
-      <td th:text="${hotel_list.description}"></td>
+    <tr th:each="hotel: ${hotelList}">
+      <td th:text="${hotel.hotel_name}"></td>
+      <td th:text="${hotel.description}"></td>
 
     </tr>
     </tbody>
